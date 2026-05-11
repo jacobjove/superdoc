@@ -1806,6 +1806,8 @@ export type Page = {
    * decoration boxes anchored to the real bottom margin while the body shrinks.
    */
   footnoteReserved?: number;
+  /** Numeric page number after section numbering restart/offset. Used for OOXML odd/even parity. */
+  displayNumber?: number;
   numberText?: string;
   size?: { w: number; h: number };
   orientation?: 'portrait' | 'landscape';
@@ -2016,6 +2018,7 @@ export type HeaderFooterType = 'default' | 'first' | 'even' | 'odd';
 export type HeaderFooterPage = {
   number: number;
   fragments: Fragment[];
+  displayNumber?: number;
   numberText?: string;
   /**
    * Optional page-local block clones backing this page's resolved fragments.

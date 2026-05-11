@@ -249,6 +249,11 @@ export type FlowRunLink = {
   history?: boolean;
 };
 
+export type PageNumberFieldFormat = {
+  format?: 'decimal' | 'upperRoman' | 'lowerRoman' | 'upperLetter' | 'lowerLetter' | 'numberInDash';
+  zeroPadding?: number;
+};
+
 /**
  * Common formatting marks that can be applied to any run type.
  * Used by TextRun, TabRun, and other run types that support inline formatting.
@@ -304,6 +309,8 @@ export type TextRun = RunMarks & {
   link?: FlowRunLink;
   /** Token annotations for dynamic content (page numbers, etc.). */
   token?: 'pageNumber' | 'totalPageCount' | 'pageReference';
+  /** Explicit formatting requested by PAGE/NUMPAGES field switches. */
+  pageNumberFieldFormat?: PageNumberFieldFormat;
   /** Absolute ProseMirror position (inclusive) of first character in this run. */
   pmStart?: number;
   /** Absolute ProseMirror position (exclusive) after the last character. */
@@ -1809,6 +1816,7 @@ export type Page = {
   /** Numeric page number after section numbering restart/offset. Used for OOXML odd/even parity. */
   displayNumber?: number;
   numberText?: string;
+  displayNumber?: number;
   size?: { w: number; h: number };
   orientation?: 'portrait' | 'landscape';
   sectionRefs?: {
@@ -2020,6 +2028,7 @@ export type HeaderFooterPage = {
   fragments: Fragment[];
   displayNumber?: number;
   numberText?: string;
+  displayNumber?: number;
   /**
    * Optional page-local block clones backing this page's resolved fragments.
    * Present when header/footer tokens were laid out per page or per bucket.

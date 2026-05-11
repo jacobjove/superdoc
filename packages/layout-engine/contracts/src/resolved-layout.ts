@@ -57,6 +57,8 @@ export type ResolvedPage = {
   displayNumber?: number;
   /** Formatted page number text (e.g. "i", "ii" for Roman numeral sections). */
   numberText?: string;
+  /** Section-aware numeric page value before formatting. */
+  displayNumber?: number;
   /** Vertical alignment of content within this page. */
   vAlign?: SectionVerticalAlign;
   /** Base section margins before header/footer inflation. Used for vAlign centering calculations. */
@@ -428,6 +430,7 @@ export type ResolvedHeaderFooterPage = {
   /** Numeric page number after section numbering restart/offset. Used for OOXML odd/even parity. */
   displayNumber?: number;
   numberText?: string;
+  displayNumber?: number;
   items: ResolvedPaintItem[];
 };
 

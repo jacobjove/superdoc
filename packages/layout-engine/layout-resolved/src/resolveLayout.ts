@@ -320,7 +320,6 @@ export function resolveLayout(input: ResolveLayoutInput): ResolvedLayout {
     footnoteReserved: page.footnoteReserved,
     displayNumber: page.displayNumber,
     numberText: page.numberText,
-    displayNumber: page.displayNumber,
     vAlign: page.vAlign,
     baseMargins: page.baseMargins,
     sectionIndex: page.sectionIndex,

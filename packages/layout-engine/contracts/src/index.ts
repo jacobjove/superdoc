@@ -1818,7 +1818,6 @@ export type Page = {
   /** Numeric page number after section numbering restart/offset. Used for OOXML odd/even parity. */
   displayNumber?: number;
   numberText?: string;
-  displayNumber?: number;
   size?: { w: number; h: number };
   orientation?: 'portrait' | 'landscape';
   sectionRefs?: {
@@ -2030,7 +2029,6 @@ export type HeaderFooterPage = {
   fragments: Fragment[];
   displayNumber?: number;
   numberText?: string;
-  displayNumber?: number;
   /**
    * Optional page-local block clones backing this page's resolved fragments.
    * Present when header/footer tokens were laid out per page or per bucket.

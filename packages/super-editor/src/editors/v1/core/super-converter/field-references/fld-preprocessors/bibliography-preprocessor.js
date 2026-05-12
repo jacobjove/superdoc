@@ -5,9 +5,11 @@
  *
  * @param {import('../../v2/types/index.js').OpenXmlNode[]} nodesToCombine The nodes to combine.
  * @param {string} instrText The instruction text.
+ * @param {object} [_options]
  * @returns {import('../../v2/types/index.js').OpenXmlNode[]}
  */
-export function preProcessBibliographyInstruction(nodesToCombine, instrText) {
+export function preProcessBibliographyInstruction(nodesToCombine, instrText, options = {}) {
+  void options;
   const contentNodes =
     Array.isArray(nodesToCombine) && nodesToCombine.length > 0
       ? nodesToCombine

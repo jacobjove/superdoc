@@ -76,6 +76,12 @@ export { computeFragmentPmRange, computeLinePmRange, type LinePmRange } from './
 export { cloneColumnLayout, normalizeColumnLayout, widthsEqual } from './column-layout.js';
 export type { NormalizedColumnLayout } from './column-layout.js';
 export {
+  resolveInheritedHeaderFooterRef,
+  type HeaderFooterRefIdentifier,
+  type HeaderFooterRefMap,
+  type ResolveInheritedHeaderFooterRefInput,
+} from './header-footer-inheritance.js';
+export {
   formatPageNumber,
   formatPageNumberFieldValue,
   type PageNumberFieldFormat,

@@ -77,8 +77,10 @@ export { cloneColumnLayout, normalizeColumnLayout, widthsEqual } from './column-
 export type { NormalizedColumnLayout } from './column-layout.js';
 export {
   resolveInheritedHeaderFooterRef,
+  resolveInheritedHeaderFooterRefWithType,
   type HeaderFooterRefIdentifier,
   type HeaderFooterRefMap,
+  type ResolvedInheritedHeaderFooterRef,
   type ResolveInheritedHeaderFooterRefInput,
 } from './header-footer-inheritance.js';
 export {
